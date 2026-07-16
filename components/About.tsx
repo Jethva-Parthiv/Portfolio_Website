@@ -13,8 +13,8 @@ const infoCards = [
   },
   {
     icon: Briefcase,
-    title: 'Specialisation',
-    lines: ['Agentic AI · RAG · LangGraph', 'FastAPI · LLM Evaluation · MCP'],
+    title: 'Focus Areas',
+    lines: ['Python · Agentic AI · RAG · LangGraph · FastAPI', 'Machine Learning · Data Science'],
     color: 'text-cyan-400',
     bg: 'rgba(6,182,212,0.08)',
     border: 'rgba(6,182,212,0.2)',

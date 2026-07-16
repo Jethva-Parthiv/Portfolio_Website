@@ -43,7 +43,7 @@ function TypewriterRole() {
 const socials = [
   { icon: Github,   href: 'https://github.com/Jethva-Parthiv',             label: 'GitHub'   },
   { icon: Linkedin, href: 'https://linkedin.com/in/jethva-parthiv',        label: 'LinkedIn' },
-  { icon: Mail,     href: 'mailto:jethvaparthiv7@gmail.com',               label: 'Email'    },
+  { icon: Mail,     href: 'mailto:jethva.parthiv007@gmail.com',            label: 'Email'    },
   { icon: Phone,    href: 'tel:+919081908259',                             label: 'Phone'    },
 ]
 
@@ -204,6 +204,13 @@ export default function Hero() {
               className="absolute top-1/2 -left-16 glass border border-white/10 px-3 py-1.5 rounded-xl text-xs font-medium text-pink-300"
             >
               🤖 Agentic AI
+            </motion.div>
+            <motion.div
+              animate={{ y: [0, -6, 0] }}
+              transition={{ duration: 4.2, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
+              className="absolute -bottom-8 -right-8 glass border border-white/10 px-3 py-1.5 rounded-xl text-xs font-medium text-orange-300"
+            >
+              📊 ML / Data Science
             </motion.div>
           </motion.div>
 

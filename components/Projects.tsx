@@ -8,7 +8,7 @@ type Project = {
   desc: string
   bullets: string[]
   tech: string[]
-  status: 'Live' | 'In Progress' | 'Open Source'
+  status: 'Live' | 'Improving' | 'Open Source'
   gradient: string
   github?: string
   live?: string
@@ -28,12 +28,27 @@ const projects: Project[] = [
       'Telemetry for token usage, latency & cost tracking with interactive ROI and automation dashboards',
     ],
     tech: ['Python', 'LangGraph', 'LangChain', 'Gemini', 'FastAPI', 'React', 'ChromaDB', 'LangSmith', 'Slack SDK', 'Notion API', 'Salesforce API', 'SSE'],
-    status: 'In Progress',
+    status: 'Improving',
     gradient: 'from-violet-600 to-purple-500',
     github: 'https://github.com/Jethva-Parthiv/opspilot',
     live: 'https://jethva-parthiv.github.io/OpsPilot/',
     liveLabel: 'Demo Website',
     featured: true,
+  },
+  {
+    title: 'RAGVerse AI',
+    subtitle: 'End-to-End RAG Framework',
+    desc: 'Designed and implemented a modular Retrieval-Augmented Generation (RAG) system using LangGraph and LangChain, enabling multi-turn conversational interactions with persistent memory.',
+    bullets: [
+      'Modular RAG system enabling multi-turn conversational interactions with persistent memory checkpointing in PostgreSQL',
+      'ChromaDB retrieval pipeline with hybrid retrieval, reranking, and configurable document chunking',
+      'RAGAS-based evaluation pipeline measuring answer faithfulness, answer relevancy, context precision, and retrieval quality',
+      'Extensible design supporting future LLM guardrails, query rewriting, contextual compression, and adaptive retrieval',
+    ],
+    tech: ['Python', 'LangChain', 'LangGraph', 'Gemini', 'ChromaDB', 'PostgreSQL', 'Ragas', 'LangSmith'],
+    status: 'Improving',
+    gradient: 'from-pink-600 to-rose-500',
+    github: 'https://github.com/Jethva-Parthiv/RAGVerse_AI',
   },
   {
     title: 'ResearchFlow',
@@ -60,7 +75,7 @@ const projects: Project[] = [
       'Modular architecture allows new data sources to be added in under 30 minutes',
     ],
     tech: ['Python', 'LangGraph', 'FastAPI', 'Streamlit', 'Gemini API'],
-    status: 'Open Source',
+    status: 'Improving',
     gradient: 'from-green-600 to-emerald-500',
     github: 'https://github.com/Jethva-Parthiv/autonomous-event-scout-agent',
   },
@@ -82,7 +97,7 @@ const projects: Project[] = [
 
 const statusStyle: Record<string, string> = {
   'Live':        'badge-green',
-  'In Progress': 'badge-violet',
+  'Improving':   'badge-violet',
   'Open Source': 'badge-cyan',
 }
 

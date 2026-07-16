@@ -12,7 +12,7 @@ const quickLinks = [
 const socials = [
   { icon: Github,   href: 'https://github.com/Jethva-Parthiv',         label: 'GitHub'   },
   { icon: Linkedin, href: 'https://linkedin.com/in/jethva-parthiv',    label: 'LinkedIn' },
-  { icon: Mail,     href: 'mailto:jethvaparthiv7@gmail.com',           label: 'Email'    },
+  { icon: Mail,     href: 'mailto:jethva.parthiv007@gmail.com',        label: 'Email'    },
   { icon: Phone,    href: 'tel:+919081908259',                         label: 'Phone'    },
 ]
 
@@ -69,7 +69,7 @@ export default function Footer() {
             collaborations. Let's build something intelligent together.
           </p>
           <a
-            href="mailto:jethvaparthiv7@gmail.com"
+            href="mailto:jethva.parthiv007@gmail.com"
             className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-violet-600 to-cyan-500 text-white text-sm font-semibold btn-glow"
           >
             Let's Talk

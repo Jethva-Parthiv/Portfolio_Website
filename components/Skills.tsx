@@ -69,6 +69,19 @@ const groups: Group[] = [
       { name: 'Scikit-Learn',             pct: 70 },
     ],
   },
+  {
+    title: 'Soft Skills',
+    emoji: '🤝',
+    color: 'from-amber-500 to-orange-400',
+    border: 'rgba(245,158,11,0.25)',
+    skills: [
+      { name: 'Problem Solving',  pct: 95 },
+      { name: 'Adaptability',     pct: 90 },
+      { name: 'Team Dynamics',    pct: 88 },
+      { name: 'Time Management',  pct: 85 },
+      { name: 'MVP Mindset',      pct: 90 },
+    ],
+  },
 ]
 
 function SkillBar({ name, pct, color }: { name: string; pct: number; color: string }) {

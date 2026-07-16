@@ -16,36 +16,66 @@ type Achievement = {
 const achievements: Achievement[] = [
   {
     icon: '🥇',
+    title: '1st Place — Python Programming Competition',
+    org: 'Tech-Fest · Sardar Patel University, Vallabh Vidyanagar',
+    year: '2026',
+    desc: 'Secured 1st place in the university-level Python programming competition, solving advanced logic, data structures, and algorithmic problems.',
+    accent: 'text-amber-400',
+    border: 'rgba(251,191,36,0.2)',
+    highlights: ['Python', 'Data Structures', 'Algorithmic Logic'],
+  },
+  {
+    icon: '🏆',
     title: '1st Place — Code Siege (Python)',
-    org: 'Tech Kaushalya 2026 · Gujarat University, Ahmedabad',
+    org: 'Tech Kaushalya 2026 · Dept. of Computer Science, Gujarat University',
     year: 'Feb 2026',
-    desc: 'Secured 1st place in Code Siege at Tech Kaushalya 2026 (9–10 Feb). A unique two-phase battle: I built the initial Python solution, then an opponent deliberately injected bugs — and my teammate, working in complete isolation without the problem statement, had to understand the unfamiliar codebase and restore it under time pressure.',
+    desc: 'Secured 1st place in Code Siege. A unique two-phase battle: I built the initial Python solution, then an opponent deliberately injected bugs — and my teammate, working in complete isolation without the problem statement, had to understand the codebase and restore it under time pressure.',
     accent: 'text-amber-400',
     border: 'rgba(251,191,36,0.2)',
     highlights: ['Clean Code', 'Problem Solving', 'Adaptability', 'Teamwork'],
     link: 'https://lnkd.in/p/d_bm2g-U',
   },
   {
+    icon: '🥈',
+    title: 'Runner-up — Logic Forge (Python)',
+    org: 'Tech Kaushalya 2026 · Dept. of Computer Science, Gujarat University',
+    year: 'Feb 2026',
+    desc: 'Won second place in the university-level Python coding marathon, designing algorithms to solve complex logic challenges under strict run-time optimizations.',
+    accent: 'text-slate-300',
+    border: 'rgba(226,232,240,0.15)',
+    highlights: ['Python', 'Code Optimisation', 'Logic Design'],
+  },
+  {
     icon: '🏆',
-    title: '1st Rank — Code Combat (Java)',
-    org: 'Ignite 2026 · CHARUSAT, Charotar University',
+    title: '1st Place — Code Combat (Java)',
+    org: 'IGNITE 2026 · CMPICA, CHARUSAT, Changa',
     year: 'Jan 2026',
-    desc: 'Ranked 1st in Code Combat (PG Level – Java) at Ignite 2026 on January 23, organized by CHARUSAT. Started from an elimination round with 45 teams and worked through multiple coding challenges under time pressure with a clear problem-solving strategy.',
+    desc: 'Ranked 1st in Code Combat (PG Level – Java) on January 23. Started from an elimination round with 45 teams and worked through multiple coding challenges under time pressure with a clear strategy.',
     accent: 'text-yellow-400',
     border: 'rgba(234,179,8,0.2)',
-    highlights: ['45 Teams Eliminated', 'Time Pressure', 'Java OOP', 'Strategic Thinking'],
+    highlights: ['45 Teams Eliminated', 'Java OOP', 'Strategic Thinking'],
     link: 'https://lnkd.in/p/dFEKAC4f',
   },
   {
     icon: '🚀',
-    title: 'SSIP New India Vibrant Hackathon',
-    org: 'Ganpat University, Kherva · Mehsana',
+    title: 'Participant — SSIP Regional Hackathon',
+    org: 'New India Vibrant Hackathon · Ganpat University, Kherva',
     year: '2023',
-    desc: 'Built FitAthlete — a smart nutrition & diet recommendation web app for athletes — during a 24-hour hackathon. Tracked calories, fats, carbs and suggested nutritious dishes with exact nutritional breakdowns. Built with Python (Flask), HTML, CSS & JavaScript. A defining experience that ignited my passion for building technology under pressure.',
+    desc: 'Built FitAthlete — a smart nutrition & diet recommendation web app for athletes — during a 24-hour hackathon. Tracked calories, fats, carbs and suggested nutritious dishes with exact nutritional breakdowns. Built with Python (Flask), HTML, CSS & JavaScript.',
     accent: 'text-violet-400',
     border: 'rgba(124,58,237,0.2)',
-    highlights: ['Team Dynamics', 'MVP Mindset', 'Time Management', 'Flask · HTML · CSS · JS'],
+    highlights: ['Flask', 'MVP Mindset', 'Team Dynamics'],
     link: 'https://lnkd.in/p/dT4XFeRu',
+  },
+  {
+    icon: '☁️',
+    title: 'AWS Generative AI: Art of the Possible',
+    org: 'AWS Training & Certification',
+    year: 'Online',
+    desc: 'Completed training on the fundamentals of Generative AI, foundational models, use cases, and deployment strategies in the AWS ecosystem.',
+    accent: 'text-cyan-400',
+    border: 'rgba(6,182,212,0.2)',
+    highlights: ['Generative AI', 'AWS Cloud', 'Foundational Models'],
   },
 ]
 
@@ -58,7 +88,7 @@ export default function Achievements() {
         viewport={{ once: true, margin: '-80px' }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="section-heading mb-16">Achievements</h2>
+        <h2 className="section-heading mb-16">Achievements & Certifications</h2>
 
         <div className="grid sm:grid-cols-2 gap-5">
           {achievements.map((a, i) => (

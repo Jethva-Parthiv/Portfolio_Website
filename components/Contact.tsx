@@ -7,8 +7,8 @@ const socials = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'jethvaparthiv7@gmail.com',
-    href: 'mailto:jethvaparthiv7@gmail.com',
+    value: 'jethva.parthiv007@gmail.com',
+    href: 'mailto:jethva.parthiv007@gmail.com',
     color: 'text-pink-400',
     bg: 'rgba(236,72,153,0.08)',
     border: 'rgba(236,72,153,0.2)',

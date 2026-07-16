@@ -11,6 +11,13 @@ const repos = [
     url: 'https://github.com/Jethva-Parthiv/opspilot',
   },
   {
+    name: 'RAGVerse_AI',
+    desc: 'End-to-end modular RAG system using LangGraph, LangChain, ChromaDB, and PostgreSQL.',
+    stars: 0, forks: 0,
+    lang: 'Python', langColor: '#3572A5',
+    url: 'https://github.com/Jethva-Parthiv/RAGVerse_AI',
+  },
+  {
     name: 'ResearchFlow',
     desc: 'Autonomous deep research agent with iterative self-correction and live fact-checking.',
     stars: 0, forks: 0,
