@@ -29,7 +29,7 @@ const projects: Project[] = [
     ],
     tech: ['Python', 'LangGraph', 'LangChain', 'Gemini', 'FastAPI', 'React', 'ChromaDB', 'LangSmith', 'Slack SDK', 'Notion API', 'Salesforce API', 'SSE'],
     status: 'Improving',
-    gradient: 'from-violet-600 to-purple-500',
+    gradient: 'from-purple-500 via-violet-500 to-indigo-500',
     github: 'https://github.com/Jethva-Parthiv/opspilot',
     live: 'https://jethva-parthiv.github.io/OpsPilot/',
     liveLabel: 'Demo Website',
@@ -47,7 +47,7 @@ const projects: Project[] = [
     ],
     tech: ['Python', 'LangChain', 'LangGraph', 'Gemini', 'ChromaDB', 'PostgreSQL', 'Ragas', 'LangSmith'],
     status: 'Improving',
-    gradient: 'from-pink-600 to-rose-500',
+    gradient: 'from-cyan-400 via-sky-400 to-indigo-500',
     github: 'https://github.com/Jethva-Parthiv/RAGVerse_AI',
   },
   {
@@ -61,7 +61,7 @@ const projects: Project[] = [
     ],
     tech: ['Python', 'LangGraph', 'Gemini LLM', 'Streamlit', 'LangSmith'],
     status: 'Live',
-    gradient: 'from-cyan-600 to-blue-500',
+    gradient: 'from-cyan-500 via-teal-500 to-blue-500',
     github: 'https://github.com/Jethva-Parthiv/research-assistant-agent',
     live: '#',
   },
@@ -76,7 +76,7 @@ const projects: Project[] = [
     ],
     tech: ['Python', 'LangGraph', 'FastAPI', 'Streamlit', 'Gemini API'],
     status: 'Improving',
-    gradient: 'from-green-600 to-emerald-500',
+    gradient: 'from-emerald-500 via-green-500 to-teal-500',
     github: 'https://github.com/Jethva-Parthiv/autonomous-event-scout-agent',
   },
   {
@@ -90,7 +90,7 @@ const projects: Project[] = [
     ],
     tech: ['FastAPI', 'PostgreSQL', 'JavaScript', 'REST APIs'],
     status: 'Open Source',
-    gradient: 'from-orange-500 to-amber-400',
+    gradient: 'from-amber-500 via-orange-500 to-yellow-500',
     github: 'https://github.com/Jethva-Parthiv/Dynamic_Filter_System',
   },
 ]
@@ -112,7 +112,7 @@ function FeaturedCard({ p }: { p: Project }) {
       className="md:col-span-2 glass rounded-2xl overflow-hidden card-glow border border-violet-500/20"
     >
       {/* Top accent bar */}
-      <div className={`h-1 w-full bg-gradient-to-r ${p.gradient}`} />
+      <div className="h-[3px] w-full bg-gradient-to-r from-purple-500 via-violet-500 to-indigo-500 shadow-[0_0_12px_rgba(168,85,247,0.5)]" />
 
       <div className="p-8">
         {/* Header row */}
@@ -215,7 +215,7 @@ function ProjectCard({ p, i }: { p: Project; i: number }) {
       className="group glass rounded-2xl overflow-hidden card-glow border border-white/[0.06] flex flex-col"
     >
       {/* Gradient top accent */}
-      <div className={`h-1 w-full bg-gradient-to-r ${p.gradient}`} />
+      <div className={`h-[3px] w-full bg-gradient-to-r ${p.gradient} shadow-[0_0_10px_rgba(255,255,255,0.15)]`} />
 
       <div className="p-6 flex flex-col flex-1">
         {/* Badge row */}
