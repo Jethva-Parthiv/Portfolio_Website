@@ -63,7 +63,8 @@ const projects: Project[] = [
     status: 'Live',
     gradient: 'from-cyan-500 via-teal-500 to-blue-500',
     github: 'https://github.com/Jethva-Parthiv/research-assistant-agent',
-    live: '#',
+    live: 'https://researchflow-agent.streamlit.app/',
+    liveLabel: 'Live App',
   },
   {
     title: 'AI Event Scout Agent',
