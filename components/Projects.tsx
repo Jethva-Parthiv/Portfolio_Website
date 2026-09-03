@@ -67,6 +67,23 @@ const projects: Project[] = [
     liveLabel: 'Live App',
   },
   {
+    title: 'My GitHub MCP Server',
+    subtitle: 'Extensible Model Context Protocol Server',
+    desc: 'Production-ready Model Context Protocol (MCP) server built in Python using FastMCP — serving as the foundational toolset layer for autonomous AI PR review agents.',
+    bullets: [
+      'Implemented 7 specialized PR tools covering metadata extraction, unified diffs, changed files, and inline code reviews with line targeting',
+      'Accepts repository identifiers and auth tokens as dynamic runtime parameters to inspect public and private repos without reconfiguration',
+      'Modular, extensible architecture designed to expand into custom GitHub workflows with resilient error handling',
+      'Deployed on Render with Streamable HTTP transport, JSON-RPC communication, and Pydantic validation',
+    ],
+    tech: ['Python', 'FastMCP', 'MCP', 'GitHub REST API', 'Pydantic', 'Uvicorn', 'JSON-RPC', 'Render'],
+    status: 'Live',
+    gradient: 'from-blue-600 via-indigo-500 to-purple-600',
+    github: 'https://github.com/Jethva-Parthiv/my-github-mcp-server',
+    live: 'https://my-github-mcp-server.onrender.com/mcp',
+    liveLabel: 'Live Endpoint',
+  },
+  {
     title: 'AI Event Scout Agent',
     subtitle: 'Autonomous Multi-Agent Discovery System',
     desc: 'Autonomous multi-agent system that discovers, validates, deduplicates, and ranks AI events from the web — replacing a fully manual research process.',
