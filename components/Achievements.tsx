@@ -54,6 +54,16 @@ const achievements: Achievement[] = [
     highlights: ['45 Teams Eliminated', 'Java OOP', 'Strategic Thinking'],
   },
   {
+    icon: '⚡',
+    title: 'Participant — n8n Community Hackathon',
+    org: 'FCA & CMPICA · CHARUSAT',
+    year: 'Aug 2026',
+    desc: 'Demonstrated innovation and technical skills in developing AI-powered workflow automation solutions using the n8n platform, designing robust automated pipelines and AI integrations.',
+    accent: 'text-rose-400',
+    border: 'rgba(244,63,94,0.2)',
+    highlights: ['n8n Platform', 'AI Workflows', 'Automation', 'CMPICA'],
+  },
+  {
     icon: '🚀',
     title: 'Participant — SSIP Regional Hackathon',
     org: 'New India Vibrant Hackathon · Ganpat University, Kherva',
