@@ -72,7 +72,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="/resume.pdf"
+            href="/Parthiv_Jethva_Resume.pdf"
             target="_blank"
             rel="noreferrer"
             className="btn-glow ml-2 px-4 py-2 rounded-xl bg-gradient-to-r from-violet-600 to-cyan-500 text-white text-sm font-semibold"
@@ -117,7 +117,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="/resume.pdf"
+                href="/Parthiv_Jethva_Resume.pdf"
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => setMenuOpen(false)}

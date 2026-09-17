@@ -1,6 +1,7 @@
 "use client"
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { Github, Linkedin, Mail, Download, ArrowRight, Phone } from 'lucide-react'
 
 const roles = [
@@ -60,7 +61,7 @@ export default function Hero() {
       <div className="orb w-72 h-72 bg-cyan-500/15 bottom-20 right-10"  style={{ animationDelay: '-4s' }} />
 
       <div className="grid lg:grid-cols-2 gap-16 items-center w-full">
-        {/* Left — text */}
+        {/* Left - text */}
         <div className="relative z-10">
           {/* Available badge */}
           <motion.div
@@ -99,7 +100,7 @@ export default function Hero() {
             className="mt-5 text-slate-400 max-w-lg leading-relaxed"
           >
             I design and build scalable agentic AI systems, multi-agent workflows, RAG pipelines,
-            and AI-powered automation tools — prototyping fast and iterating based on real usage.
+            and AI-powered automation tools - prototyping fast and iterating based on real usage.
           </motion.p>
 
           {/* CTA buttons */}
@@ -116,7 +117,8 @@ export default function Hero() {
               View Projects <ArrowRight className="w-4 h-4" />
             </a>
             <a
-              href="/resume.pdf"
+              href="/Parthiv_Jethva_Resume.pdf"
+              download="Parthiv_Jethva_Resume.pdf"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl glass border border-white/10 text-slate-200 font-medium hover:border-violet-500/40 transition-colors"
@@ -147,7 +149,7 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Right — avatar + stats */}
+        {/* Right - avatar + stats */}
         <div className="relative flex flex-col items-center gap-8">
           {/* Avatar ring */}
           <motion.div
@@ -162,53 +164,57 @@ export default function Hero() {
             <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-violet-600/30 to-cyan-500/20 blur-2xl" style={{ margin: '-8px' }} />
             {/* Avatar circle */}
             <div className="relative w-56 h-56 rounded-full bg-gradient-to-br from-violet-700 to-cyan-500 p-1 shadow-glow">
-              <div className="w-full h-full rounded-full bg-deep flex items-center justify-center overflow-hidden">
-                <div className="text-center select-none">
-                  <div className="font-display font-black text-5xl gradient-text">JP</div>
-                  <div className="text-xs text-slate-500 mt-1 font-medium">Agentic AI Engineer</div>
-                </div>
+              <div className="w-full h-full rounded-full bg-deep flex items-center justify-center overflow-hidden relative">
+                <Image
+                  src="/Profile.jpg"
+                  alt="Parthiv Jethva"
+                  width={224}
+                  height={224}
+                  className="w-full h-full object-cover object-center"
+                  priority
+                />
               </div>
             </div>
             {/* Floating tech badges */}
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -top-4 -right-8 glass border border-white/10 px-3 py-1.5 rounded-xl text-xs font-medium text-violet-300"
+              className="absolute -top-4 -right-8 bg-[#0b1329]/90 backdrop-blur-md border border-violet-500/40 shadow-xl px-3 py-1.5 rounded-xl text-xs font-semibold text-violet-300"
             >
               🤖 LangGraph
             </motion.div>
             <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-              className="absolute -bottom-4 -left-8 glass border border-white/10 px-3 py-1.5 rounded-xl text-xs font-medium text-cyan-300"
+              className="absolute -bottom-4 -left-8 bg-[#0b1329]/90 backdrop-blur-md border border-cyan-500/40 shadow-xl px-3 py-1.5 rounded-xl text-xs font-semibold text-cyan-300"
             >
               ⚡ FastAPI
             </motion.div>
             <motion.div
               animate={{ x: [0, 6, 0] }}
               transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
-              className="absolute top-1/2 -right-14 glass border border-white/10 px-3 py-1.5 rounded-xl text-xs font-medium text-green-300"
+              className="absolute top-1/2 -right-14 bg-[#0b1329]/90 backdrop-blur-md border border-green-500/40 shadow-xl px-3 py-1.5 rounded-xl text-xs font-semibold text-emerald-300"
             >
               🧠 RAG
             </motion.div>
             <motion.div
               animate={{ y: [0, 6, 0] }}
               transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut', delay: 0.8 }}
-              className="absolute -top-6 -left-10 glass border border-white/10 px-3 py-1.5 rounded-xl text-xs font-medium text-yellow-300"
+              className="absolute -top-6 -left-10 bg-[#0b1329]/90 backdrop-blur-md border border-yellow-500/40 shadow-xl px-3 py-1.5 rounded-xl text-xs font-semibold text-amber-300"
             >
               🐍 Python
             </motion.div>
             <motion.div
               animate={{ x: [0, -6, 0] }}
               transition={{ duration: 3.8, repeat: Infinity, ease: 'easeInOut', delay: 1.2 }}
-              className="absolute top-1/2 -left-16 glass border border-white/10 px-3 py-1.5 rounded-xl text-xs font-medium text-pink-300"
+              className="absolute top-1/2 -left-16 bg-[#0b1329]/95 backdrop-blur-md border border-pink-500/50 shadow-2xl px-3.5 py-1.5 rounded-xl text-xs font-bold text-pink-400 drop-shadow-sm"
             >
               🤖 Agentic AI
             </motion.div>
             <motion.div
               animate={{ y: [0, -6, 0] }}
               transition={{ duration: 4.2, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
-              className="absolute -bottom-8 -right-8 glass border border-white/10 px-3 py-1.5 rounded-xl text-xs font-medium text-orange-300"
+              className="absolute -bottom-8 -right-8 bg-[#0b1329]/90 backdrop-blur-md border border-orange-500/40 shadow-xl px-3 py-1.5 rounded-xl text-xs font-semibold text-orange-300"
             >
               📊 ML / Data Science
             </motion.div>
