@@ -49,7 +49,7 @@ const socials = [
 ]
 
 const stats = [
-  { value: '4+',  label: 'AI Projects'    },
+  { value: '7+',  label: 'AI Projects'    },
   { value: '3+',  label: 'Years Coding'   },
 ]
 
@@ -71,7 +71,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full glass border border-green-500/20"
           >
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-            <span className="text-xs text-green-400 font-medium">Open to Opportunities</span>
+            <span className="text-xs text-green-400 font-medium">Open to Relocate & Remote Opportunities</span>
           </motion.div>
 
           <motion.h1

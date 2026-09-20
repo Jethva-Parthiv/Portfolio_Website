@@ -62,7 +62,7 @@ export default function Footer() {
           <div className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-4">Status</div>
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass border border-green-500/20 mb-4">
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-            <span className="text-xs text-green-400 font-medium">Open to Opportunities</span>
+            <span className="text-xs text-green-400 font-medium">Open to Relocate & Remote Opportunities</span>
           </div>
           <p className="text-sm text-slate-500 leading-relaxed">
             Open to full-time AI Engineering roles, freelance AI projects, and research

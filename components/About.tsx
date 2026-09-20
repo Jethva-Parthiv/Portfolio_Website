@@ -22,7 +22,7 @@ const infoCards = [
   {
     icon: MapPin,
     title: 'Location',
-    lines: ['Gujarat, India', 'Open to Remote Opportunities'],
+    lines: ['Gujarat, India', 'Open to Relocate & Remote Opportunities'],
     color: 'text-pink-400',
     bg: 'rgba(236,72,153,0.08)',
     border: 'rgba(236,72,153,0.2)',

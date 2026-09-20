@@ -43,7 +43,7 @@ const socials = [
   {
     icon: MapPin,
     label: 'Location',
-    value: 'Gujarat, India · Open to Remote',
+    value: 'Gujarat, India · Open to Relocate & Remote',
     href: '#',
     color: 'text-violet-400',
     bg: 'rgba(124,58,237,0.08)',

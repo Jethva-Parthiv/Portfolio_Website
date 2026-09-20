@@ -7,34 +7,46 @@ type Group = { title: string; emoji: string; color: string; border: string; skil
 
 const groups: Group[] = [
   {
-    title: 'Languages',
-    emoji: '💬',
+    title: 'Languages & Concepts',
+    emoji: '💻',
     color: 'from-violet-600 to-purple-400',
     border: 'rgba(124,58,237,0.25)',
     skills: [
-      { name: 'Python',     pct: 99 },
-      { name: 'Java',       pct: 75 },
-      { name: 'JavaScript', pct: 72 },
-      { name: 'C++',        pct: 70 },
-      { name: 'C',          pct: 60 },
-      { name: 'HTML & CSS', pct: 85 },
-      { name: 'PHP',        pct: 65 },
-      { name: 'SQL',        pct: 80 },
+      { name: 'Python', pct: 98 },
+      { name: 'SQL', pct: 85 },
+      { name: 'OOPs', pct: 90 },
+      { name: 'DSA', pct: 82 },
     ],
   },
   {
-    title: 'AI & LLMs',
-    emoji: '🧠',
+    title: 'LLM Harness',
+    emoji: '🤖',
     color: 'from-cyan-500 to-teal-400',
     border: 'rgba(6,182,212,0.25)',
     skills: [
-      { name: 'LangGraph',          pct: 92 },
-      { name: 'LangChain',          pct: 90 },
-      { name: 'RAG Pipelines',      pct: 90 },
-      { name: 'LLM APIs',           pct: 93 },
-      { name: 'Prompt Engineering', pct: 88 },
-      { name: 'LLM Evaluation',     pct: 82 },
-      { name: 'Agentic Workflows',  pct: 91 },
+      { name: 'LLM Integration', pct: 95 },
+      { name: 'LangGraph', pct: 94 },
+      { name: 'LangChain', pct: 90 },
+      { name: 'Tool Calling', pct: 92 },
+      { name: 'Chatbots', pct: 92 },
+      { name: 'Multi-Agent Systems', pct: 92 },
+      { name: 'Prompt Engineering', pct: 90 },
+      { name: 'Observability', pct: 86 },
+      { name: 'LLM Evals', pct: 85 },
+      { name: 'MCP', pct: 88 },
+    ],
+  },
+  {
+    title: 'AI Concepts',
+    emoji: '🧠',
+    color: 'from-blue-500 to-indigo-400',
+    border: 'rgba(59,130,246,0.25)',
+    skills: [
+      { name: 'Agentic Harness', pct: 92 },
+      { name: 'RAG Systems', pct: 94 },
+      { name: 'Machine Learning', pct: 88 },
+      { name: 'Data Science', pct: 85 },
+      { name: 'NLP', pct: 88 },
     ],
   },
   {
@@ -43,30 +55,71 @@ const groups: Group[] = [
     color: 'from-green-500 to-emerald-400',
     border: 'rgba(16,185,129,0.25)',
     skills: [
-      { name: 'FastAPI',   pct: 93 },
-      { name: 'Flask',     pct: 80 },
-      { name: 'Streamlit', pct: 85 },
-      { name: 'REST APIs', pct: 90 },
-      { name: 'React',     pct: 65 },
-      { name: 'Pydantic',  pct: 90 },
-      { name: 'Docker',    pct: 62 },
-      { name: 'LangSmith', pct: 85 },
+      { name: 'FastAPI', pct: 94 },
+      { name: 'Streamlit', pct: 90 },
+      { name: 'React (basic)', pct: 68 },
+      { name: 'REST APIs', pct: 92 },
+      { name: 'Pydantic', pct: 90 },
     ],
   },
   {
-    title: 'Databases & Libraries',
-    emoji: '🗄️',
+    title: 'Libraries',
+    emoji: '📚',
     color: 'from-pink-500 to-rose-400',
     border: 'rgba(236,72,153,0.25)',
     skills: [
-      { name: 'PostgreSQL',               pct: 82 },
-      { name: 'ChromaDB / FAISS',         pct: 85 },
-      { name: 'Qdrant',                   pct: 80 },
-      { name: 'OpenSearch',               pct: 68 },
-      { name: 'Pandas / NumPy',           pct: 88 },
-      { name: 'Matplotlib / Plotly',      pct: 85 },
-      { name: 'HuggingFace Transformers', pct: 72 },
-      { name: 'Scikit-Learn',             pct: 70 },
+      { name: 'Pandas', pct: 90 },
+      { name: 'NumPy', pct: 88 },
+      { name: 'SpaCy', pct: 82 },
+      { name: 'NLTK', pct: 80 },
+      { name: 'Scikit-Learn', pct: 86 },
+      { name: 'HuggingFace Transformers', pct: 84 },
+      { name: 'FastMCP', pct: 88 },
+    ],
+  },
+  {
+    title: 'Databases',
+    emoji: '🗄️',
+    color: 'from-amber-500 to-yellow-400',
+    border: 'rgba(245,158,11,0.25)',
+    skills: [
+      { name: 'PostgreSQL', pct: 86 },
+      { name: 'MySQL', pct: 82 },
+      { name: 'Qdrant', pct: 88 },
+      { name: 'FAISS', pct: 88 },
+      { name: 'ChromaDB', pct: 86 },
+      { name: 'Pinecone', pct: 84 },
+      { name: 'Redis', pct: 80 },
+    ],
+  },
+  {
+    title: 'DevOps & LLMOps',
+    emoji: '🚀',
+    color: 'from-purple-500 to-pink-400',
+    border: 'rgba(168,85,247,0.25)',
+    skills: [
+      { name: 'Docker', pct: 82 },
+      { name: 'Render', pct: 85 },
+      { name: 'Vercel', pct: 86 },
+      { name: 'Streamlit Cloud', pct: 90 },
+      { name: 'LangSmith', pct: 88 },
+      { name: 'HuggingFace Spaces', pct: 86 },
+      { name: 'AWS (Console Basics)', pct: 75 },
+    ],
+  },
+  {
+    title: 'Tools',
+    emoji: '🛠️',
+    color: 'from-teal-500 to-emerald-400',
+    border: 'rgba(20,184,166,0.25)',
+    skills: [
+      { name: 'Git', pct: 90 },
+      { name: 'GitHub', pct: 92 },
+      { name: 'Postman', pct: 88 },
+      { name: 'Google Colab', pct: 90 },
+      { name: 'VS Code', pct: 95 },
+      { name: 'Antigravity', pct: 90 },
+      { name: 'n8n', pct: 82 },
     ],
   },
   {
@@ -75,11 +128,11 @@ const groups: Group[] = [
     color: 'from-amber-500 to-orange-400',
     border: 'rgba(245,158,11,0.25)',
     skills: [
-      { name: 'Problem Solving',  pct: 95 },
-      { name: 'Adaptability',     pct: 90 },
-      { name: 'Team Dynamics',    pct: 88 },
-      { name: 'Time Management',  pct: 85 },
-      { name: 'MVP Mindset',      pct: 90 },
+      { name: 'Problem Solving', pct: 95 },
+      { name: 'Adaptability', pct: 90 },
+      { name: 'Team Dynamics', pct: 88 },
+      { name: 'Time Management', pct: 85 },
+      { name: 'MVP Mindset', pct: 90 },
     ],
   },
 ]
@@ -119,14 +172,14 @@ export default function Skills() {
       >
         <h2 className="section-heading mb-16">Technical Skills</h2>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {groups.map((g, gi) => (
             <motion.div
               key={g.title}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
-              transition={{ delay: gi * 0.1, duration: 0.5 }}
+              transition={{ delay: gi * 0.08, duration: 0.5 }}
               className="p-6 rounded-2xl glass-hover"
               style={{ background: 'rgba(255,255,255,0.025)', border: `1px solid ${g.border}` }}
             >
@@ -134,7 +187,7 @@ export default function Skills() {
                 <span className="text-2xl">{g.emoji}</span>
                 <h3 className="font-display font-semibold text-white">{g.title}</h3>
               </div>
-              <div className="space-y-5">
+              <div className="space-y-4">
                 {g.skills.map(s => (
                   <SkillBar key={s.name} name={s.name} pct={s.pct} color={g.color} />
                 ))}

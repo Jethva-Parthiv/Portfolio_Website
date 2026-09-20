@@ -32,6 +32,13 @@ const repos = [
     url: 'https://github.com/Jethva-Parthiv/autonomous-event-scout-agent',
   },
   {
+    name: 'my-github-mcp-server',
+    desc: 'Model Context Protocol (MCP) server enabling AI agents and LLMs to interact seamlessly with GitHub APIs.',
+    stars: 0, forks: 0,
+    lang: 'Python', langColor: '#3572A5',
+    url: 'https://github.com/Jethva-Parthiv/my-github-mcp-server',
+  },
+  {
     name: 'dynamic-filter-system',
     desc: 'Production-ready FastAPI backend for enterprise datasets with dynamic filtering and pagination.',
     stars: 0, forks: 0,
@@ -41,8 +48,8 @@ const repos = [
 ]
 
 const stats = [
-  { value: '4+',  label: 'AI Projects',  icon: Code     },
-  { value: '10+', label: 'Technologies', icon: GitFork  },
+  { value: '7+',  label: 'AI Projects on GitHub', icon: Code     },
+  { value: '10+', label: 'Technologies',          icon: GitFork  },
 ]
 
 export default function GitHubSection() {
