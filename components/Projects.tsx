@@ -36,6 +36,20 @@ const projects: Project[] = [
     featured: true,
   },
   {
+    title: 'NoteFlow',
+    subtitle: 'Autonomous Voice-to-Notion Capture Agent',
+    desc: 'Autonomous voice-driven Notion assistant using FastAPI, LangGraph, and Google Gemini connected to Notion MCP — transcribing voice via Groq Whisper and delivering spoken confirmations via edge-tts.',
+    bullets: [
+      'Cut capture latency by over 70% by pairing an in-memory workspace cache with prompt-tuned single-turn creation for new notes, while maintaining full multi-turn ReAct loops for exploratory multi-step page updates',
+      'Built LangGraph duplicate-tool interception and recursion circuit breakers to stop infinite search loops',
+      'Implemented English-locked, zero-temperature STT to reduce hallucinations, and used LangSmith to trace agent trajectories, tool calls, and token usage',
+    ],
+    tech: ['Python', 'FastAPI', 'LangGraph', 'Gemini', 'Notion MCP', 'Groq Whisper', 'edge-tts', 'LangSmith'],
+    status: 'Open Source',
+    gradient: 'from-fuchsia-500 via-purple-500 to-indigo-500',
+    github: 'https://github.com/Jethva-Parthiv/NoteFlow',
+  },
+  {
     title: 'RAGVerse AI',
     subtitle: 'End-to-End RAG Framework',
     desc: 'Designed and implemented a modular Retrieval-Augmented Generation (RAG) system using LangGraph and LangChain, enabling multi-turn conversational interactions with persistent memory.',

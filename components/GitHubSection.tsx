@@ -11,6 +11,13 @@ const repos = [
     url: 'https://github.com/Jethva-Parthiv/opspilot',
   },
   {
+    name: 'NoteFlow',
+    desc: 'Autonomous voice-to-Notion capture agent — FastAPI + LangGraph + Gemini + Notion MCP + Groq Whisper + edge-tts.',
+    stars: 0, forks: 0,
+    lang: 'Python', langColor: '#3572A5',
+    url: 'https://github.com/Jethva-Parthiv/NoteFlow',
+  },
+  {
     name: 'RAGVerse_AI',
     desc: 'End-to-end modular RAG system using LangGraph, LangChain, ChromaDB, and PostgreSQL.',
     stars: 0, forks: 0,
