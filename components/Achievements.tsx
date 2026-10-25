@@ -64,6 +64,16 @@ const achievements: Achievement[] = [
     highlights: ['n8n Platform', 'AI Workflows', 'Automation', 'CMPICA'],
   },
   {
+    icon: '🤖',
+    title: 'Participant — Supervity AutoPilot Hackathon',
+    org: 'Supervity · Ahmedabad',
+    year: '2026',
+    desc: 'Successfully participated in the Supervity AutoPilot Ahmedabad Hackathon, building an AI Employee that pushed the boundaries of workflow automation.',
+    accent: 'text-indigo-400',
+    border: 'rgba(99,102,241,0.2)',
+    highlights: ['AI Employee', 'Workflow Automation', 'Autonomous Agents', 'Supervity'],
+  },
+  {
     icon: '🚀',
     title: 'Participant — SSIP Regional Hackathon',
     org: 'New India Vibrant Hackathon · Ganpat University, Kherva',
