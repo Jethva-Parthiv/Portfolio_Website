@@ -20,7 +20,6 @@ function TypewriterRole() {
   useEffect(() => {
     const full = roles[roleIdx]
     let timer: ReturnType<typeof setTimeout>
-
     if (!deleting && displayed.length < full.length) {
       timer = setTimeout(() => setDisplayed(full.slice(0, displayed.length + 1)), 65)
     } else if (!deleting && displayed.length === full.length) {
@@ -36,7 +35,7 @@ function TypewriterRole() {
 
   return (
     <span className="gradient-text font-bold">
-      {displayed}<span className="cursor-blink text-violet-400">|</span>
+      {displayed}<span className="cursor-blink text-violet-500">|</span>
     </span>
   )
 }
@@ -68,27 +67,27 @@ export default function Hero() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 }}
-            className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full glass border border-green-500/20"
+            className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full glass border border-emerald-500/30 dark:border-green-500/20"
           >
-            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-            <span className="text-xs text-green-400 font-medium">Open to Relocate & Remote Opportunities</span>
+            <span className="w-2 h-2 rounded-full bg-emerald-500 dark:bg-green-400 animate-pulse" />
+            <span className="text-xs text-emerald-700 dark:text-green-400 font-medium">Open to Relocate & Remote Opportunities</span>
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.6 }}
-            className="font-display text-5xl md:text-6xl font-bold leading-tight tracking-tight"
+            className="font-display text-5xl md:text-6xl font-bold leading-tight tracking-tight text-slate-900 dark:text-white"
           >
             Jethva<br />
-            <span className="text-white/80">Parthiv</span>
+            Parthiv
           </motion.h1>
 
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="mt-3 text-xl md:text-2xl text-slate-400 font-medium h-8"
+            className="mt-3 text-xl md:text-2xl text-slate-600 dark:text-slate-400 font-medium h-8"
           >
             <TypewriterRole />
           </motion.div>
@@ -97,7 +96,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.45, duration: 0.5 }}
-            className="mt-5 text-slate-400 max-w-lg leading-relaxed"
+            className="mt-5 text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed"
           >
             I design and build scalable agentic AI systems, multi-agent workflows, RAG pipelines,
             and AI-powered automation tools - prototyping fast and iterating based on real usage.
@@ -121,7 +120,7 @@ export default function Hero() {
               download="Parthiv_Jethva_Resume.pdf"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl glass border border-white/10 text-slate-200 font-medium hover:border-violet-500/40 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl glass border border-slate-300 dark:border-white/10 text-slate-700 dark:text-slate-200 font-medium hover:border-violet-500/40 hover:text-slate-900 dark:hover:text-white transition-colors"
             >
               <Download className="w-4 h-4" /> Resume
             </a>
@@ -141,7 +140,7 @@ export default function Hero() {
                 aria-label={label}
                 target={href.startsWith('http') ? '_blank' : undefined}
                 rel="noreferrer"
-                className="w-10 h-10 rounded-xl glass border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:border-violet-500/40 transition-all"
+                className="w-10 h-10 rounded-xl glass border border-slate-300 dark:border-white/10 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:border-violet-500/40 transition-all"
               >
                 <Icon className="w-4 h-4" />
               </a>
@@ -164,7 +163,7 @@ export default function Hero() {
             <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-violet-600/30 to-cyan-500/20 blur-2xl" style={{ margin: '-8px' }} />
             {/* Avatar circle */}
             <div className="relative w-56 h-56 rounded-full bg-gradient-to-br from-violet-700 to-cyan-500 p-1 shadow-glow">
-              <div className="w-full h-full rounded-full bg-deep flex items-center justify-center overflow-hidden relative">
+              <div className="w-full h-full rounded-full bg-slate-950 flex items-center justify-center overflow-hidden relative">
                 <Image
                   src="/Profile.jpg"
                   alt="Parthiv Jethva"
@@ -179,42 +178,42 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -top-4 -right-8 bg-[#0b1329]/90 backdrop-blur-md border border-violet-500/40 shadow-xl px-3 py-1.5 rounded-xl text-xs font-semibold text-violet-300"
+              className="absolute -top-4 -right-8 bg-white/95 dark:bg-[#0b1329]/90 backdrop-blur-md border border-violet-500/30 dark:border-violet-500/40 shadow-lg px-3 py-1.5 rounded-xl text-xs font-semibold text-violet-700 dark:text-violet-300"
             >
               🤖 LangGraph
             </motion.div>
             <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-              className="absolute -bottom-4 -left-8 bg-[#0b1329]/90 backdrop-blur-md border border-cyan-500/40 shadow-xl px-3 py-1.5 rounded-xl text-xs font-semibold text-cyan-300"
+              className="absolute -bottom-4 -left-8 bg-white/95 dark:bg-[#0b1329]/90 backdrop-blur-md border border-cyan-500/30 dark:border-cyan-500/40 shadow-lg px-3 py-1.5 rounded-xl text-xs font-semibold text-cyan-700 dark:text-cyan-300"
             >
               ⚡ FastAPI
             </motion.div>
             <motion.div
               animate={{ x: [0, 6, 0] }}
               transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
-              className="absolute top-1/2 -right-14 bg-[#0b1329]/90 backdrop-blur-md border border-green-500/40 shadow-xl px-3 py-1.5 rounded-xl text-xs font-semibold text-emerald-300"
+              className="absolute top-1/2 -right-14 bg-white/95 dark:bg-[#0b1329]/90 backdrop-blur-md border border-emerald-500/30 dark:border-green-500/40 shadow-lg px-3 py-1.5 rounded-xl text-xs font-semibold text-emerald-700 dark:text-emerald-300"
             >
               🧠 RAG
             </motion.div>
             <motion.div
               animate={{ y: [0, 6, 0] }}
               transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut', delay: 0.8 }}
-              className="absolute -top-6 -left-10 bg-[#0b1329]/90 backdrop-blur-md border border-yellow-500/40 shadow-xl px-3 py-1.5 rounded-xl text-xs font-semibold text-amber-300"
+              className="absolute -top-6 -left-10 bg-white/95 dark:bg-[#0b1329]/90 backdrop-blur-md border border-amber-500/30 dark:border-yellow-500/40 shadow-lg px-3 py-1.5 rounded-xl text-xs font-semibold text-amber-700 dark:text-amber-300"
             >
               🐍 Python
             </motion.div>
             <motion.div
               animate={{ x: [0, -6, 0] }}
               transition={{ duration: 3.8, repeat: Infinity, ease: 'easeInOut', delay: 1.2 }}
-              className="absolute top-1/2 -left-16 bg-[#0b1329]/95 backdrop-blur-md border border-pink-500/50 shadow-2xl px-3.5 py-1.5 rounded-xl text-xs font-bold text-pink-400 drop-shadow-sm"
+              className="absolute top-1/2 -left-16 bg-white/95 dark:bg-[#0b1329]/95 backdrop-blur-md border border-pink-500/30 dark:border-pink-500/50 shadow-lg px-3.5 py-1.5 rounded-xl text-xs font-bold text-pink-700 dark:text-pink-400"
             >
               🤖 Agentic AI
             </motion.div>
             <motion.div
               animate={{ y: [0, -6, 0] }}
               transition={{ duration: 4.2, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
-              className="absolute -bottom-8 -right-8 bg-[#0b1329]/90 backdrop-blur-md border border-orange-500/40 shadow-xl px-3 py-1.5 rounded-xl text-xs font-semibold text-orange-300"
+              className="absolute -bottom-8 -right-8 bg-white/95 dark:bg-[#0b1329]/90 backdrop-blur-md border border-orange-500/30 dark:border-orange-500/40 shadow-lg px-3 py-1.5 rounded-xl text-xs font-semibold text-orange-700 dark:text-orange-300"
             >
               📊 ML / Data Science
             </motion.div>
@@ -228,9 +227,9 @@ export default function Hero() {
             className="grid grid-cols-2 gap-3 w-full max-w-sm"
           >
             {stats.map(({ value, label }) => (
-              <div key={label} className="glass border border-white/[0.07] rounded-xl p-4 text-center">
+              <div key={label} className="glass rounded-xl p-4 text-center">
                 <div className="font-display font-bold text-2xl gradient-text">{value}</div>
-                <div className="text-xs text-slate-500 mt-1">{label}</div>
+                <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">{label}</div>
               </div>
             ))}
           </motion.div>

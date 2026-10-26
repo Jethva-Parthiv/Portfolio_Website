@@ -74,7 +74,7 @@ export default function GitHubSection() {
             href="https://github.com/Jethva-Parthiv"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors"
+            className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
           >
             <Github className="w-4 h-4" /> @Jethva-Parthiv
           </a>
@@ -84,9 +84,9 @@ export default function GitHubSection() {
         <div className="grid grid-cols-2 gap-4 mb-10">
           {stats.map(({ value, label, icon: Icon }) => (
             <div key={label} className="p-5 glass rounded-2xl text-center border border-white/[0.06]">
-              <Icon className="w-5 h-5 text-violet-400 mx-auto mb-2" />
+              <Icon className="w-5 h-5 text-violet-600 dark:text-violet-400 mx-auto mb-2" />
               <div className="font-display font-bold text-2xl gradient-text">{value}</div>
-              <div className="text-xs text-slate-500 mt-1">{label}</div>
+              <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">{label}</div>
             </div>
           ))}
         </div>
@@ -107,15 +107,15 @@ export default function GitHubSection() {
             >
               <div className="flex items-start justify-between">
                 <div className="flex items-center gap-2">
-                  <Github className="w-4 h-4 text-slate-500" />
-                  <span className="font-medium text-sm text-white group-hover:text-violet-300 transition-colors">{r.name}</span>
+                  <Github className="w-4 h-4 text-slate-500 dark:text-slate-400" />
+                  <span className="font-semibold text-sm text-slate-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-300 transition-colors">{r.name}</span>
                 </div>
-                <ExternalLink className="w-3.5 h-3.5 text-slate-600 group-hover:text-slate-400 transition-colors" />
+                <ExternalLink className="w-3.5 h-3.5 text-slate-400 dark:text-slate-600 group-hover:text-slate-700 dark:group-hover:text-slate-300 transition-colors" />
               </div>
 
-              <p className="text-xs text-slate-400 leading-relaxed flex-1">{r.desc}</p>
+              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed flex-1">{r.desc}</p>
 
-              <div className="flex items-center gap-1.5 text-xs text-slate-500">
+              <div className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400">
                 <span className="w-2.5 h-2.5 rounded-full" style={{ background: r.langColor }} />
                 {r.lang}
               </div>

@@ -1,6 +1,8 @@
 "use client"
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { Sun, Moon } from 'lucide-react'
+import { useTheme } from './ThemeContext'
 
 const links = [
   { label: 'About',        href: '#about' },
@@ -16,6 +18,7 @@ export default function Navbar() {
   const [active,      setActive]      = useState('')
   const [menuOpen,    setMenuOpen]    = useState(false)
   const [scrollPct,   setScrollPct]   = useState(0)
+  const { theme, toggleTheme }        = useTheme()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,14 +53,14 @@ export default function Navbar() {
         initial={{ y: -60, opacity: 0 }}
         animate={{ y: 0,   opacity: 1 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
-        className={`fixed top-3 inset-x-0 mx-auto z-50 transition-all duration-300 rounded-2xl px-6 py-3 flex items-center gap-8
+        className={`fixed top-3 inset-x-0 mx-auto z-50 transition-all duration-300 rounded-2xl px-6 py-3 flex items-center gap-6
           ${scrolled
-            ? 'glass shadow-card border border-white/[0.07] w-[92%] max-w-5xl'
+            ? 'glass shadow-card border border-slate-200 dark:border-white/[0.07] w-[92%] max-w-5xl'
             : 'bg-transparent w-[92%] max-w-5xl'}`}
       >
         {/* Logo */}
         <a href="#" className="font-display font-bold text-lg gradient-text flex-shrink-0 select-none">
-          JP<span className="text-white/30">.</span>
+          JP<span className="text-slate-400 dark:text-white/30">.</span>
         </a>
 
         {/* Desktop links */}
@@ -75,24 +78,52 @@ export default function Navbar() {
             href="/Parthiv_Jethva_Resume.pdf"
             target="_blank"
             rel="noreferrer"
-            className="btn-glow ml-2 px-4 py-2 rounded-xl bg-gradient-to-r from-violet-600 to-cyan-500 text-white text-sm font-semibold"
+            className="btn-glow px-4 py-2 rounded-xl bg-gradient-to-r from-violet-600 to-cyan-500 text-white text-sm font-semibold"
           >
             Resume
           </a>
+
+          {/* Theme toggle button */}
+          <button
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+            className="p-2 rounded-xl glass border border-slate-300 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white transition-all hover:scale-105 active:scale-95 flex items-center justify-center"
+            title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+          >
+            {theme === 'dark' ? (
+              <Sun className="w-4 h-4 text-amber-300 transition-transform duration-300 rotate-0 hover:rotate-45" />
+            ) : (
+              <Moon className="w-4 h-4 text-violet-600 transition-transform duration-300 rotate-0 hover:-rotate-12" />
+            )}
+          </button>
         </div>
 
-        {/* Mobile hamburger */}
-        <button
-          className="md:hidden ml-auto text-slate-300 hover:text-white transition-colors"
-          onClick={() => setMenuOpen(o => !o)}
-          aria-label="Toggle menu"
-        >
-          <div className="flex flex-col gap-1.5 w-6">
-            <span className={`block h-0.5 bg-current rounded transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-            <span className={`block h-0.5 bg-current rounded transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-            <span className={`block h-0.5 bg-current rounded transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
-          </div>
-        </button>
+        {/* Mobile controls */}
+        <div className="md:hidden ml-auto flex items-center gap-3">
+          <button
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+            className="p-2 rounded-xl glass border border-slate-300 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white transition-all"
+          >
+            {theme === 'dark' ? (
+              <Sun className="w-4 h-4 text-amber-300" />
+            ) : (
+              <Moon className="w-4 h-4 text-violet-600" />
+            )}
+          </button>
+
+          <button
+            className="text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white transition-colors p-1"
+            onClick={() => setMenuOpen(o => !o)}
+            aria-label="Toggle menu"
+          >
+            <div className="flex flex-col gap-1.5 w-6">
+              <span className={`block h-0.5 bg-current rounded transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+              <span className={`block h-0.5 bg-current rounded transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
+              <span className={`block h-0.5 bg-current rounded transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+            </div>
+          </button>
+        </div>
       </motion.nav>
 
       {/* Mobile drawer */}
@@ -111,7 +142,7 @@ export default function Navbar() {
                   key={l.href}
                   href={l.href}
                   onClick={() => setMenuOpen(false)}
-                  className={`text-sm font-medium transition-colors ${active === l.href.slice(1) ? 'text-white' : 'text-slate-400 hover:text-white'}`}
+                  className={`text-sm font-medium transition-colors ${active === l.href.slice(1) ? 'text-violet-600 dark:text-white font-semibold' : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'}`}
                 >
                   {l.label}
                 </a>

@@ -12,7 +12,7 @@ type Project = {
   gradient: string
   github?: string
   live?: string
-  liveLabel?: string // Add customizable label for the demo button
+  liveLabel?: string
   featured?: boolean
 }
 
@@ -153,8 +153,8 @@ function FeaturedCard({ p }: { p: Project }) {
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-600 to-purple-500 flex items-center justify-center">
               <Zap className="w-4 h-4 text-white" />
             </div>
-            <span className="flex items-center gap-1.5 text-sm text-amber-400 font-semibold">
-              <Star className="w-3.5 h-3.5 fill-amber-400" />
+            <span className="flex items-center gap-1.5 text-sm text-amber-600 dark:text-amber-400 font-semibold">
+              <Star className="w-3.5 h-3.5 fill-amber-500 dark:fill-amber-400 text-amber-500 dark:text-amber-400" />
               Featured Project
             </span>
           </div>
@@ -166,17 +166,17 @@ function FeaturedCard({ p }: { p: Project }) {
           {/* Left: title + description + bullets */}
           <div className="flex flex-col gap-4">
             <div>
-              <h3 className="font-display font-bold text-2xl text-white leading-tight">{p.title}</h3>
+              <h3 className="font-display font-bold text-2xl text-slate-900 dark:text-white leading-tight">{p.title}</h3>
               {p.subtitle && (
-                <p className="text-sm text-slate-500 mt-1">{p.subtitle}</p>
+                <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">{p.subtitle}</p>
               )}
             </div>
 
-            <p className="text-slate-300 text-sm leading-relaxed">{p.desc}</p>
+            <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">{p.desc}</p>
 
             <ul className="space-y-2">
               {p.bullets.map((b, bi) => (
-                <li key={bi} className="flex items-start gap-2.5 text-sm text-slate-400">
+                <li key={bi} className="flex items-start gap-2.5 text-sm text-slate-600 dark:text-slate-400">
                   <span className={`mt-1.5 w-1.5 h-1.5 rounded-full bg-gradient-to-r ${p.gradient} flex-shrink-0`} />
                   {b}
                 </li>
@@ -188,17 +188,12 @@ function FeaturedCard({ p }: { p: Project }) {
           <div className="flex flex-col justify-between gap-6">
             {/* Tech stack */}
             <div>
-              <div className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-3">Tech Stack</div>
+              <div className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-3">Tech Stack</div>
               <div className="flex flex-wrap gap-2">
                 {p.tech.map(t => (
                   <span
                     key={t}
-                    className="px-3 py-1 rounded-lg text-xs font-medium border"
-                    style={{
-                      background: 'rgba(124,58,237,0.08)',
-                      borderColor: 'rgba(124,58,237,0.2)',
-                      color: '#c4b5fd',
-                    }}
+                    className="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-white/[0.05] text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/[0.07]"
                   >
                     {t}
                   </span>
@@ -213,7 +208,7 @@ function FeaturedCard({ p }: { p: Project }) {
                   href={p.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-white/10 text-sm text-slate-300 hover:text-white hover:border-white/25 transition-colors"
+                  className="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-slate-300 dark:border-white/10 text-sm text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white hover:border-slate-400 dark:hover:border-white/25 transition-colors"
                 >
                   <Github className="w-4 h-4" /> View Code
                 </a>
@@ -223,9 +218,9 @@ function FeaturedCard({ p }: { p: Project }) {
                   href={p.live}
                   target="_blank"
                   rel="noreferrer"
-                  className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r ${p.gradient} btn-glow`}
+                  className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold !text-white bg-gradient-to-r ${p.gradient} btn-glow`}
                 >
-                  <ExternalLink className="w-4 h-4" /> {p.liveLabel || 'Live Demo'}
+                  <ExternalLink className="w-4 h-4 !text-white" /> {p.liveLabel || 'Live Demo'}
                 </a>
               )}
             </div>
@@ -252,19 +247,19 @@ function ProjectCard({ p, i }: { p: Project; i: number }) {
       <div className="p-6 flex flex-col flex-1">
         {/* Badge row */}
         <div className="flex items-center justify-between gap-3 mb-3">
-          <h3 className="font-display font-bold text-lg text-white leading-tight">{p.title}</h3>
+          <h3 className="font-display font-bold text-lg text-slate-900 dark:text-white leading-tight">{p.title}</h3>
           <span className={`badge ${statusStyle[p.status]} flex-shrink-0`}>{p.status}</span>
         </div>
         {p.subtitle && (
-          <div className="text-xs text-slate-500 font-medium mb-3">{p.subtitle}</div>
+          <div className="text-xs text-slate-500 dark:text-slate-400 font-medium mb-3">{p.subtitle}</div>
         )}
 
-        <p className="text-slate-400 text-sm leading-relaxed">{p.desc}</p>
+        <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{p.desc}</p>
 
         {/* Bullet points */}
         <ul className="mt-4 space-y-1.5 flex-1">
           {p.bullets.map((b, bi) => (
-            <li key={bi} className="flex items-start gap-2 text-sm text-slate-400">
+            <li key={bi} className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
               <span className={`mt-1.5 w-1.5 h-1.5 rounded-full bg-gradient-to-r ${p.gradient} flex-shrink-0`} />
               {b}
             </li>
@@ -274,7 +269,7 @@ function ProjectCard({ p, i }: { p: Project; i: number }) {
         {/* Tech stack */}
         <div className="mt-5 flex flex-wrap gap-2">
           {p.tech.map(t => (
-            <span key={t} className="px-2.5 py-1 rounded-lg text-xs font-medium bg-white/[0.05] text-slate-400 border border-white/[0.07]">
+            <span key={t} className="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-white/[0.05] text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/[0.07]">
               {t}
             </span>
           ))}
@@ -287,7 +282,7 @@ function ProjectCard({ p, i }: { p: Project; i: number }) {
               href={p.github}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 px-4 py-2 rounded-xl border border-white/10 text-sm text-slate-300 hover:text-white hover:border-white/20 transition-colors"
+              className="flex items-center gap-2 px-4 py-2 rounded-xl border border-slate-300 dark:border-white/10 text-sm text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white hover:border-slate-400 dark:hover:border-white/20 transition-colors"
             >
               <Github className="w-4 h-4" /> Code
             </a>
@@ -297,9 +292,9 @@ function ProjectCard({ p, i }: { p: Project; i: number }) {
               href={p.live}
               target="_blank"
               rel="noreferrer"
-              className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold text-white bg-gradient-to-r ${p.gradient} btn-glow`}
+              className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold !text-white bg-gradient-to-r ${p.gradient} btn-glow`}
             >
-              <ExternalLink className="w-4 h-4" /> {p.liveLabel || 'Live'}
+              <ExternalLink className="w-4 h-4 !text-white" /> {p.liveLabel || 'Live'}
             </a>
           )}
         </div>
@@ -327,7 +322,7 @@ export default function Projects() {
             href="https://github.com/Jethva-Parthiv"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors"
+            className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
           >
             <Star className="w-4 h-4" /> View all on GitHub
           </a>

@@ -19,8 +19,8 @@ const achievements: Achievement[] = [
     org: 'Tech-Fest · Sardar Patel University, Vallabh Vidyanagar',
     year: '2026',
     desc: 'Secured 1st place in the university-level Python programming competition, solving advanced logic, data structures, and algorithmic problems.',
-    accent: 'text-amber-400',
-    border: 'rgba(251,191,36,0.2)',
+    accent: 'text-amber-600 dark:text-amber-400',
+    border: 'rgba(251,191,36,0.3)',
     highlights: ['Python', 'Data Structures', 'Algorithmic Logic'],
   },
   {
@@ -29,8 +29,8 @@ const achievements: Achievement[] = [
     org: 'Tech Kaushalya 2026 · Dept. of Computer Science, Gujarat University',
     year: 'Feb 2026',
     desc: 'Secured 1st place in Code Siege. A unique two-phase battle: I built the initial Python solution, then an opponent deliberately injected bugs — and my teammate, working in complete isolation without the problem statement, had to understand the codebase and restore it under time pressure.',
-    accent: 'text-amber-400',
-    border: 'rgba(251,191,36,0.2)',
+    accent: 'text-amber-600 dark:text-amber-400',
+    border: 'rgba(251,191,36,0.3)',
     highlights: ['Clean Code', 'Problem Solving', 'Adaptability', 'Teamwork'],
   },
   {
@@ -39,8 +39,8 @@ const achievements: Achievement[] = [
     org: 'Tech Kaushalya 2026 · Dept. of Computer Science, Gujarat University',
     year: 'Feb 2026',
     desc: 'Won second place in the university-level Python coding marathon, designing algorithms to solve complex logic challenges under strict run-time optimizations.',
-    accent: 'text-slate-300',
-    border: 'rgba(226,232,240,0.15)',
+    accent: 'text-slate-800 dark:text-slate-200',
+    border: 'rgba(100,116,139,0.25)',
     highlights: ['Python', 'Code Optimisation', 'Logic Design'],
   },
   {
@@ -49,8 +49,8 @@ const achievements: Achievement[] = [
     org: 'IGNITE 2026 · CMPICA, CHARUSAT, Changa',
     year: 'Jan 2026',
     desc: 'Ranked 1st in Code Combat (PG Level – Java) on January 23. Started from an elimination round with 45 teams and worked through multiple coding challenges under time pressure with a clear strategy.',
-    accent: 'text-yellow-400',
-    border: 'rgba(234,179,8,0.2)',
+    accent: 'text-amber-600 dark:text-yellow-400',
+    border: 'rgba(234,179,8,0.3)',
     highlights: ['45 Teams Eliminated', 'Java OOP', 'Strategic Thinking'],
   },
   {
@@ -59,8 +59,8 @@ const achievements: Achievement[] = [
     org: 'FCA & CMPICA · CHARUSAT',
     year: 'Aug 2026',
     desc: 'Demonstrated innovation and technical skills in developing AI-powered workflow automation solutions using the n8n platform, designing robust automated pipelines and AI integrations.',
-    accent: 'text-rose-400',
-    border: 'rgba(244,63,94,0.2)',
+    accent: 'text-rose-600 dark:text-rose-400',
+    border: 'rgba(244,63,94,0.3)',
     highlights: ['n8n Platform', 'AI Workflows', 'Automation', 'CMPICA'],
   },
   {
@@ -69,8 +69,8 @@ const achievements: Achievement[] = [
     org: 'Supervity · Ahmedabad',
     year: '2026',
     desc: 'Successfully participated in the Supervity AutoPilot Ahmedabad Hackathon, building an AI Employee that pushed the boundaries of workflow automation.',
-    accent: 'text-indigo-400',
-    border: 'rgba(99,102,241,0.2)',
+    accent: 'text-indigo-600 dark:text-indigo-400',
+    border: 'rgba(99,102,241,0.3)',
     highlights: ['AI Employee', 'Workflow Automation', 'Autonomous Agents', 'Supervity'],
   },
   {
@@ -79,8 +79,8 @@ const achievements: Achievement[] = [
     org: 'New India Vibrant Hackathon · Ganpat University, Kherva',
     year: '2023',
     desc: 'Built FitAthlete — a smart nutrition & diet recommendation web app for athletes — during a 24-hour hackathon. Tracked calories, fats, carbs and suggested nutritious dishes with exact nutritional breakdowns. Built with Python (Flask), HTML, CSS & JavaScript.',
-    accent: 'text-violet-400',
-    border: 'rgba(124,58,237,0.2)',
+    accent: 'text-violet-600 dark:text-violet-400',
+    border: 'rgba(124,58,237,0.3)',
     highlights: ['Flask', 'MVP Mindset', 'Team Dynamics'],
   },
   {
@@ -89,8 +89,8 @@ const achievements: Achievement[] = [
     org: 'AWS Training & Certification',
     year: 'Online',
     desc: 'Completed training on the fundamentals of Generative AI, foundational models, use cases, and deployment strategies in the AWS ecosystem.',
-    accent: 'text-cyan-400',
-    border: 'rgba(6,182,212,0.2)',
+    accent: 'text-cyan-700 dark:text-cyan-400',
+    border: 'rgba(6,182,212,0.3)',
     highlights: ['Generative AI', 'AWS Cloud', 'Foundational Models'],
   },
 ]
@@ -110,7 +110,7 @@ export default function Achievements() {
             href="https://drive.google.com/drive/folders/1GcPiD01Jb4DMfSmaXw7wFlguHSi1frlz?usp=sharing"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors"
+            className="inline-flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
           >
             <span>Verify Certificates</span>
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -127,8 +127,8 @@ export default function Achievements() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-30px' }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="glass-hover p-6 rounded-2xl card-glow flex gap-5"
-              style={{ background: 'rgba(255,255,255,0.025)', border: `1px solid ${a.border}` }}
+              className="glass glass-hover p-6 rounded-2xl card-glow flex gap-5 border"
+              style={{ borderColor: a.border }}
             >
               {/* Icon */}
               <div
@@ -141,14 +141,14 @@ export default function Achievements() {
               <div className="flex-1 min-w-0">
                 <div className="flex items-start justify-between gap-2">
                   <h3 className={`font-display font-semibold text-sm leading-snug ${a.accent}`}>{a.title}</h3>
-                  <span className="flex-shrink-0 text-xs text-slate-500 font-medium">{a.year}</span>
+                  <span className="flex-shrink-0 text-xs text-slate-500 dark:text-slate-400 font-medium">{a.year}</span>
                 </div>
-                <div className="text-xs text-slate-500 mt-1 font-medium">{a.org}</div>
-                <p className="text-sm text-slate-400 mt-2 leading-relaxed">{a.desc}</p>
+                <div className="text-xs text-slate-500 dark:text-slate-400 mt-1 font-medium">{a.org}</div>
+                <p className="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">{a.desc}</p>
                 {a.highlights && (
                   <div className="flex flex-wrap gap-1.5 mt-3">
                     {a.highlights.map(h => (
-                      <span key={h} className="px-2 py-0.5 rounded-md text-xs font-medium bg-white/[0.05] text-slate-400 border border-white/[0.07]">{h}</span>
+                      <span key={h} className="px-2 py-0.5 rounded-md text-xs font-medium bg-slate-100 dark:bg-white/[0.05] text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/[0.07]">{h}</span>
                     ))}
                   </div>
                 )}

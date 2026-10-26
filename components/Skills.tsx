@@ -144,8 +144,8 @@ function SkillBar({ name, pct, color }: { name: string; pct: number; color: stri
   return (
     <div ref={ref} className="space-y-1.5">
       <div className="flex justify-between text-sm">
-        <span className="text-slate-300 font-medium">{name}</span>
-        <span className="text-slate-500 text-xs">{pct}%</span>
+        <span className="text-slate-800 dark:text-slate-300 font-medium">{name}</span>
+        <span className="text-slate-500 dark:text-slate-400 text-xs font-semibold">{pct}%</span>
       </div>
       <div className="skill-bar">
         <div
@@ -180,12 +180,12 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ delay: gi * 0.08, duration: 0.5 }}
-              className="p-6 rounded-2xl glass-hover"
-              style={{ background: 'rgba(255,255,255,0.025)', border: `1px solid ${g.border}` }}
+              className="p-6 rounded-2xl glass glass-hover card-glow border"
+              style={{ borderColor: g.border }}
             >
               <div className="flex items-center gap-3 mb-6">
                 <span className="text-2xl">{g.emoji}</span>
-                <h3 className="font-display font-semibold text-white">{g.title}</h3>
+                <h3 className="font-display font-semibold text-slate-900 dark:text-white">{g.title}</h3>
               </div>
               <div className="space-y-4">
                 {g.skills.map(s => (

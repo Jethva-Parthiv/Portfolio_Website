@@ -1,7 +1,7 @@
 "use client"
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import { Mail, Linkedin, Github, Send, MapPin, MessageSquare, Phone } from 'lucide-react'
+import { Mail, Linkedin, Github, Send, MapPin, Phone } from 'lucide-react'
 
 const socials = [
   {
@@ -9,45 +9,45 @@ const socials = [
     label: 'Email',
     value: 'jethva.parthiv007@gmail.com',
     href: 'mailto:jethva.parthiv007@gmail.com',
-    color: 'text-pink-400',
+    color: 'text-pink-600 dark:text-pink-400',
     bg: 'rgba(236,72,153,0.08)',
-    border: 'rgba(236,72,153,0.2)',
+    border: 'rgba(236,72,153,0.25)',
   },
   {
     icon: Phone,
     label: 'Phone',
     value: '+91 90819 08259',
     href: 'tel:+919081908259',
-    color: 'text-green-400',
+    color: 'text-emerald-700 dark:text-green-400',
     bg: 'rgba(16,185,129,0.08)',
-    border: 'rgba(16,185,129,0.2)',
+    border: 'rgba(16,185,129,0.25)',
   },
   {
     icon: Linkedin,
     label: 'LinkedIn',
     value: 'linkedin.com/in/jethva-parthiv',
     href: 'https://linkedin.com/in/jethva-parthiv',
-    color: 'text-blue-400',
+    color: 'text-blue-600 dark:text-blue-400',
     bg: 'rgba(59,130,246,0.08)',
-    border: 'rgba(59,130,246,0.2)',
+    border: 'rgba(59,130,246,0.25)',
   },
   {
     icon: Github,
     label: 'GitHub',
     value: 'github.com/Jethva-Parthiv',
     href: 'https://github.com/Jethva-Parthiv',
-    color: 'text-slate-300',
-    bg: 'rgba(255,255,255,0.04)',
-    border: 'rgba(255,255,255,0.1)',
+    color: 'text-slate-800 dark:text-slate-300',
+    bg: 'rgba(100,116,139,0.08)',
+    border: 'rgba(100,116,139,0.25)',
   },
   {
     icon: MapPin,
     label: 'Location',
     value: 'Gujarat, India · Open to Relocate & Remote',
     href: '#',
-    color: 'text-violet-400',
+    color: 'text-violet-600 dark:text-violet-400',
     bg: 'rgba(124,58,237,0.08)',
-    border: 'rgba(124,58,237,0.2)',
+    border: 'rgba(124,58,237,0.25)',
   },
 ]
 
@@ -71,7 +71,7 @@ export default function Contact() {
       >
         <div className="mb-16">
           <h2 className="section-heading">Get In Touch</h2>
-          <p className="mt-6 text-slate-400 max-w-lg">
+          <p className="mt-6 text-slate-600 dark:text-slate-400 max-w-lg">
             Interested in working together? Whether it's a freelance AI project, a full-time
             role, or just a chat about agentic AI — I'd love to hear from you.
           </p>
@@ -96,101 +96,93 @@ export default function Contact() {
                   <Icon className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-xs text-slate-500 font-semibold uppercase tracking-wider">{label}</div>
-                  <div className={`text-sm font-medium mt-0.5 ${color}`}>{value}</div>
+                  <div className="text-xs text-slate-500 dark:text-slate-400 font-semibold uppercase tracking-wider">{label}</div>
+                  <div className={`text-sm font-semibold mt-0.5 ${color}`}>{value}</div>
                 </div>
               </a>
             ))}
           </div>
 
-          {/* Right — form */}
+          {/* Right — message form */}
           <div className="lg:col-span-3">
-            {status === 'sent' ? (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="h-full flex flex-col items-center justify-center text-center p-10 glass rounded-2xl border border-green-500/20"
-              >
-                <div className="text-5xl mb-4">✅</div>
-                <h3 className="font-display font-bold text-xl text-white mb-2">Message Sent!</h3>
-                <p className="text-slate-400">Thanks for reaching out — I'll get back to you shortly.</p>
-                <button
-                  onClick={() => setStatus('idle')}
-                  className="mt-6 text-sm text-violet-400 hover:text-violet-300 transition-colors"
-                >
-                  Send another message
-                </button>
-              </motion.div>
-            ) : (
-              <form onSubmit={handleSubmit} className="p-6 glass rounded-2xl border border-white/[0.06] space-y-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <MessageSquare className="w-4 h-4 text-violet-400" />
-                  <span className="text-sm font-medium text-slate-300">Send a Message</span>
-                </div>
-
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs text-slate-500 font-medium mb-1.5">Name</label>
-                    <input
-                      required
-                      placeholder="Your name"
-                      value={form.name}
-                      onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
-                      className="form-input"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs text-slate-500 font-medium mb-1.5">Email</label>
-                    <input
-                      required
-                      type="email"
-                      placeholder="your@email.com"
-                      value={form.email}
-                      onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
-                      className="form-input"
-                    />
-                  </div>
-                </div>
-
+            <form
+              onSubmit={handleSubmit}
+              className="p-8 glass rounded-2xl space-y-5"
+            >
+              <div className="grid sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-xs text-slate-500 font-medium mb-1.5">Subject</label>
+                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">
+                    Your Name
+                  </label>
                   <input
+                    type="text"
                     required
-                    placeholder="What's this about?"
-                    value={form.subject}
-                    onChange={e => setForm(f => ({ ...f, subject: e.target.value }))}
-                    className="form-input"
+                    placeholder="John Doe"
+                    value={form.name}
+                    onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
+                    className="form-input text-sm"
                   />
                 </div>
-
                 <div>
-                  <label className="block text-xs text-slate-500 font-medium mb-1.5">Message</label>
-                  <textarea
+                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
                     required
-                    rows={5}
-                    placeholder="Tell me about your project or idea..."
-                    value={form.message}
-                    onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
-                    className="form-input resize-none"
+                    placeholder="john@example.com"
+                    value={form.email}
+                    onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
+                    className="form-input text-sm"
                   />
                 </div>
+              </div>
 
+              <div>
+                <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">
+                  Subject
+                </label>
+                <input
+                  type="text"
+                  required
+                  placeholder="AI Project / Full-time Role / Collaboration"
+                  value={form.subject}
+                  onChange={e => setForm(f => ({ ...f, subject: e.target.value }))}
+                  className="form-input text-sm"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">
+                  Message
+                </label>
+                <textarea
+                  rows={5}
+                  required
+                  placeholder="Tell me about your project, timeline, and goals..."
+                  value={form.message}
+                  onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
+                  className="form-input text-sm resize-none"
+                />
+              </div>
+
+              <div className="flex items-center justify-between pt-2">
                 <button
                   type="submit"
-                  disabled={status === 'sending'}
-                  className="btn-glow w-full flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-gradient-to-r from-violet-600 to-cyan-500 text-white font-semibold transition-all disabled:opacity-60"
+                  disabled={status === 'sending' || status === 'sent'}
+                  className="btn-glow inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-violet-600 to-cyan-500 text-white font-semibold text-sm disabled:opacity-60"
                 >
-                  {status === 'sending' ? (
-                    <>
-                      <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                      Sending…
-                    </>
-                  ) : (
-                    <><Send className="w-4 h-4" /> Send Message</>
-                  )}
+                  <Send className="w-4 h-4" />
+                  {status === 'sending' ? 'Sending...' : status === 'sent' ? 'Message Sent!' : 'Send Message'}
                 </button>
-              </form>
-            )}
+
+                {status === 'sent' && (
+                  <span className="text-xs text-emerald-600 dark:text-green-400 font-medium">
+                    ✓ Thanks! I'll reply soon.
+                  </span>
+                )}
+              </div>
+            </form>
           </div>
         </div>
       </motion.div>
